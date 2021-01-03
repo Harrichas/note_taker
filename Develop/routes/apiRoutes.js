@@ -1,5 +1,5 @@
 const path = require("path");
-const dbJSON = require("../db/db.json");
+let dbJSON = require("../db/db.json");
 const fs = require("fs");
 const { v4: uuidv4 } = require('uuid');
 
