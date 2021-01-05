@@ -1,7 +1,7 @@
 const express = require("express");
 const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
-const dbJSON = require("./Develop/db/db.json");
+const dbJSON = require("./db/db.json");
 const path = require("path");
 
 var app = express();
@@ -17,8 +17,8 @@ app.use(express.static(
     "./public"
 ));
 
-require("./Develop/routes/apiRoutes")(app)
-require("./Develop/routes/htmlRoutes")(app)
+require("./routes/apiRoutes")(app)
+require("./routes/htmlRoutes")(app)
 
 app.listen(PORT, function(){
     console.log("app now listening")
